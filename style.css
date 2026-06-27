@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;500&display=swap');
+
+:root {
+    --ana-sari: #ffc107;
+    --gece-siyahi: #1a1a1a;
+    --yazi-grisi: #333333;
+    --arka-plan: #f8f9fa;
+    --yumusak-gecis: all 0.4s ease;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--arka-plan);
+    color: var(--yazi-grisi);
+    overflow-x: hidden;
+    animation: sayfaBelirme 1s ease-in;
+}
+
+@keyframes sayfaBelirme {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.navbar {
+    padding: 15px 0;
+    border-bottom: 3px solid var(--ana-sari);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.navbar-brand {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.nav-link {
+    margin: 0 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: var(--yumusak-gecis);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: var(--ana-sari);
+    left: 0;
+    bottom: 0;
+    transition: var(--yumusak-gecis);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-link:hover {
+    color: var(--ana-sari) !important;
+}
+
+.carousel-item {
+    height: 85vh;
+    min-height: 450px;
+}
+
+.carousel-item img {
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(45%) contrast(110%);
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(8px);
+    bottom: 25%;
+}
+
+.carousel-caption h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    border-left: 6px solid var(--ana-sari);
+    padding-left: 20px;
+}
+
+.btn-ozel {
+    background-color: var(--ana-sari);
+    color: var(--gece-siyahi);
+    border-radius: 5px;
+    padding: 12px 35px;
+    font-weight: bold;
+    border: 2px solid var(--ana-sari);
+    transition: var(--yumusak-gecis);
+    text-transform: uppercase;
+}
+
+.btn-ozel:hover {
+    background-color: transparent;
+    color: var(--ana-sari);
+    transform: scale(1.05);
+}
+
+.ozellik-kart {
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.ozellik-kart:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.ozellik-kart .card-img-top {
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.ozellik-kart:hover .card-img-top {
+    transform: scale(1.1);
+}
+
+footer {
+    background-color: var(--gece-siyahi);
+    color: white;
+    padding: 50px 0;
+    margin-top: 60px;
+    border-top: 5px solid var(--ana-sari);
+}
+
+.footer-baslik {
+    color: var(--ana-sari);
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.karanlik-tema {
+    background-color: #121212 !important;
+    color: #ffffff !important;
+}
+
+.karanlik-tema .ozellik-kart {
+    background-color: #1e1e1e;
+    color: white;
+}
+
+.karanlik-tema .bg-white {
+    background-color: #1a1a1a !important;
+}
+
+.sari-metin {
+    color: var(--ana-sari) !important;
+}
+
+.golgeli-yazi {
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+}
+
+.btn-outline-dark:hover {
+    background-color: var(--ana-sari) !important;
+    border-color: var(--ana-sari) !important;
+    color: var(--gece-siyahi) !important;
+}
+
+.breadcrumb-item a:hover {
+    color: var(--ana-sari) !important;
+}
+
+.btn-ozel-gradyan {
+    background: linear-gradient(45deg, #ffc107, #ff9800);
+    color: #000;
+    border: none;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-ozel-gradyan:hover {
+    background: #000;
+    color: #ffc107;
+    letter-spacing: 1px;
+    box-shadow: 0 5px 15px rgba(255, 193, 7, 0.4);
+}
+
+hr.mx-auto {
+    border: none;
+    border-radius: 10px;
+}
+
+.display-4 {
+    animation: asagidanGel 0.8s ease-out;
+}
+
+@keyframes asagidanGel {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.detay-ana-resim {
+    width: 100%;
+    height: 60vh;
+    object-fit: cover;
+    filter: brightness(60%);
+}
+
+.resim-ustu-yazi {
+    position: absolute;
+    bottom: 40px;
+    left: 50px;
+    color: white;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 20px 40px;
+    border-left: 8px solid var(--ana-sari);
+    backdrop-filter: blur(5px);
+    border-radius: 0 10px 10px 0;
+}
+
+.detay-kutu {
+    background-color: #fff;
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+.detay-kutu:hover {
+    background-color: var(--ana-sari);
+    transform: scale(1.05);
+    border-color: var(--ana-sari) !important;
+}
+
+.detay-kutu:hover h5 {
+    color: #000;
+}
+
+.sticky-top {
+    z-index: 5;
+}
+
+.progress {
+    background-color: #e9ecef;
+    border-radius: 50px;
+}
+
+.progress-bar {
+    border-radius: 50px;
+}
+
+.bg-white.shadow-sm.rounded-4 {
+    transition: transform 0.3s ease;
+}
+
+.bg-white.shadow-sm.rounded-4:hover {
+    transform: translateY(-5px);
+}
+
+.hizmet-kart {
+    transition: all 0.4s ease;
+    border-top: 5px solid transparent !important;
+}
+
+.hizmet-kart:hover {
+    transform: scale(1.03);
+    border-top: 5px solid var(--ana-sari) !important;
+    box-shadow: 0 10px 25px rgba(255, 193, 7, 0.2) !important;
+}
+
+.hizmet-ikon {
+    font-size: 3.5rem;
+    display: inline-block;
+    filter: drop-shadow(0 5px 5px rgba(0,0,0,0.1));
+}
+
+@media (max-width: 768px) {
+    .border-start {
+        border-left: none !important;
+        border-bottom: 1px solid #444;
+        padding-bottom: 20px;
+    }
+}
+
+.form-control, .form-select {
+    border: 2px solid #eee;
+    padding: 12px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--ana-sari);
+    box-shadow: 0 0 10px rgba(255, 193, 7, 0.2);
+}
+
+.ratio-16x9 iframe {
+    filter: grayscale(20%) contrast(1.1);
+}
